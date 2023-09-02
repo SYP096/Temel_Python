@@ -1,0 +1,9 @@
+birinci satır.
+ikinci satır.
+üçüncü satır.
+dördüncü satır.
+beşinci satır.
+
+Not:  (Dosya yonetimi)
+Python使用控制台运行带有相对路径的指令时，是以控制台当前路径为基准，这个控制台指的是.vscode文件
+也就是说需要打开的文件要和.vscode文件在同一个文件夹内，而不是文件夹内部另一个文件夹的内部，这样是查询不到的。

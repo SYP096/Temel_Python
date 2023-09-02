@@ -1,0 +1,5 @@
+Çinar Turan
+Sadik Turan
+Sena Turan
+用'w'的时候、如果没有该文件、就会在控制台创建一个该空文件
+以后打开文件的时候你一定要用到 endcoding='utf-8' 因为不用的话土耳其语识别不了

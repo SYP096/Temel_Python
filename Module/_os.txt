@@ -1,0 +1,100 @@
+os.name：获取操作系统名称。Windows 系统返回 'nt'，Unix/Linux 系统返回 'posix'。
+
+os.getcwd()：获取当前工作目录的路径。
+
+os.chdir(path)：改变当前工作目录到指定路径。
+
+os.listdir(path='.')：列出指定目录中的所有文件和子目录，返回一个列表。
+
+os.mkdir(path, mode=0o777, *, dir_fd=None)：创建一个新目录，权限模式为 mode（默认为 777）。
+
+os.makedirs(name, mode=0o777, exist_ok=False)：递归创建目录树，权限模式为 mode（默认为 777）。
+
+os.remove(path, *, dir_fd=None)：删除指定的文件。
+
+os.rmdir(path, *, dir_fd=None)：删除指定目录，该目录必须为空。
+
+os.removedirs(name)：删除指定目录，以及其所有子目录，如果目录非空，则会引发异常。
+
+os.rename(src, dst, *, src_dir_fd=None, dst_dir_fd=None)：重命名文件或目录，将 src 改为 dst。
+
+os.stat(path, *, dir_fd=None, follow_symlinks=True)：获取指定文件或目录的状态信息，返回一个 os.stat_result 对象。
+
+os.chmod(path, mode, *, dir_fd=None, follow_symlinks=True)：修改指定文件或目录的权限模式。
+
+>>>
+
+os.path.join(path1[, path2[, ...]])：将多个路径组合成一个路径。
+
+os.path.exists(path)：检查指定路径是否存在，如果存在返回 True，否则返回 False。
+
+os.path.isfile(path)：判断指定路径是否是一个文件。
+
+os.path.isdir(path)：判断指定路径是否是一个目录。
+
+os.path.basename(path)：返回指定路径的最后一部分，即文件名或目录名。
+
+os.path.dirname(path)：返回指定路径中的目录部分。
+
+os.path.split(path): 将指定路径分割成，返回一个元组。
+
+os.path.splitext(path)：将指定路径分割成路径和扩展名两部分，返回一个元组。
+
+以上是 os 模块中一些常用的函数。需要注意的是，不同操作系统的文件路径表示方式可能不同，
+因此在编写跨平台代码时，应该使用 os.path 模块中的函数来处理文件路径。
+
+>>>以下是其他函数
+
+os.path.normpath(path)：将路径中的斜杠符号转换为当前操作系统下的斜杠符号，并去除多余的斜杠符号。
+
+os.path.normcase(path)：将路径中的大小写字符转换为当前操作系统下的标准大小写格式
+
+os.path.isabs(path)：判断指定路径是否为绝对路径。
+
+>>>
+os.path.getsize(path)：获取指定文件的大小，单位为字节。
+os.path.getctime(path)：获取指定文件或目录的创建时间。
+os.path.getmtime(path)：获取指定文件或目录的修改时间。
+os.path.getatime(path)：获取指定文件或目录的最近访问时间。
+
+以上获取时间的时候获取到的是秒， 还是要用到datetime.datetime.fromtimestamp() 函数， 使其从秒变成年月日
+>>>
+
+os.environ：一个字典，包含了当前进程的环境变量。
+
+os.getenv(key, default=None)：获取指定环境变量的值，如果不存在则返回默认值 default。
+
+os.putenv(key, value)：设置指定环境变量的值。
+
+os.system(command)：执行系统命令，返回命令执行状态的返回值。
+
+os.getpid()：获取当前进程的进程 ID。
+
+os.getppid()：获取当前进程的父进程的进程 ID。
+
+os.kill(pid, signal)：向指定进程发送信号 signal。
+
+os.waitpid(pid, options=0)：等待指定进程结束，返回一个元组，包含进程 ID 和退出状态码。
+
+os.urandom(n)：生成一个指定长度的随机字节序列，用于加密和安全相关的操作。
+
+os.symlink(src, dst)：创建一个符号链接，将 src 链接到 dst。
+
+os.readlink(path)：返回指定路径所指向的符号链接的路径
+
+
+>>>>
+
+
+os.path.abspath(path)：返回指定路径的绝对路径。
+
+os.path.relpath(path, start='.')：返回从指定起始路径 start 到指定路径 path 的相对路径。
+
+os.path.commonpath(paths)：返回多个路径中共有的最长的路径。
+
+os.path.commonprefix(list)：返回多个路径的最长公共前缀。
+
+os.path.expanduser(path)：将路径中的 ~ 或 ~user 转换为当前用户的家目录。
+
+os.path.expandvars(path)：将路径中的环境变量 $name 或 ${name} 转换为其对应的值。
+

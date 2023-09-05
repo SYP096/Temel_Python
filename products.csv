@@ -1,9 +1,0 @@
-ProductName,Price,IsPublished,Category,Reviews
-Phone 6,3000,FALSE,Telefon,0604
-IPhone 8,4000,TRUE,Telefon,0604
-IPhone 8 Plus,5000,TRUE,Telefon,0504
-IPhone XR,5500,TRUE,Telefon,0704
-IPhone 11,6000,TRUE,Telefon,0804
-Macbook Pro,7000,TRUE,Bilgisayar,0704
-Macbook Air,7000,TRUE,Bilgisayar,0604
-Macbook Air pro,9000,TRUE,Bilgisayar,0604
